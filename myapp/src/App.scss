@@ -1,0 +1,101 @@
+@font-face{
+    font-family:'iransans';
+    src:url('fonts/A\ Sogand.ttf') format('truetype')
+
+}
+ 
+body{
+    font-family: iransans;
+}
+
+$color-bt:rgb(97, 165, 255);
+$color-bt2:rgb(170, 208, 252);
+$color-tex:#fff;
+
+%btn{
+    background-color: $color-bt;
+    color: $color-tex;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 0;
+    cursor: pointer;
+}
+
+
+.Add-Contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    input{
+        padding: 14px;
+        width: 500px;
+        font-size: 15px;
+        outline: none;
+        margin: 2px;
+        border: 2px solid #cacaca;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+    button{
+      @extend %btn;
+    }
+
+    .btn:hover{
+        background-color: $color-bt2;
+        color: $color-bt;
+    }
+}
+
+.Contact-compon{
+    border-bottom: 2px solid black;
+    margin:auto;
+    margin-top: 20px;
+    padding: 0 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+
+    button{
+        @extend %btn;
+        margin-right: 20px;
+     }
+
+     .Contact-Update{
+        display: flex;
+        align-items: center;
+        .Delete-icon{
+            font-size: 20px;
+            color: red;
+            cursor: pointer;
+        }
+     }
+}
+  
+.Contact-List{
+    display: flex;
+    .img{
+       img{
+        height: 50px;
+        border-radius: 50%;
+       }
+    }
+    .info{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        
+        h4{
+            margin: 0;
+            margin-left: 20px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+    }
+
+}
